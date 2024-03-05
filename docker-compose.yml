@@ -17,4 +17,6 @@ services:
       MYSQL_ROOT_PASSWORD: root
     volumes:
       - ./back/create.sql:/docker-entrypoint-initdb.d/create.sql
-      - ./back/insert.sql:/docker-entrypoint-initdb.d/insert.sql
+      - ./back/insert.sql:/docker-entrypoint-initdb.d/insert.sql    
+    ports:
+      - 8081:8080
