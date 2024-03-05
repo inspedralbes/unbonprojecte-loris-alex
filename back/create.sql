@@ -18,4 +18,9 @@ CREATE TABLE `noms` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-
+INSERT INTO `noms` (`id`, `nom`) VALUES
+(1,	'Anna'),
+(2,	'Bernat'),
+(3,	'Carme'),
+(4,	'Albert'),
+(5,	'Cristina');

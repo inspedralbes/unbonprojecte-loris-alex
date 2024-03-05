@@ -1,0 +1,20 @@
+version: '3.1'
+
+services:
+
+  adminer:
+    image: adminer
+    restart: always
+    links:
+      - db:db
+    ports:
+      - 9091:8080
+
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./back/create.sql:/docker-entrypoint-initdb.d/create.sql
+      - ./back/insert.sql:/docker-entrypoint-initdb.d/insert.sql
